@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>TabURL Settings</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        font-family: system-ui, -apple-system, sans-serif;
+      }
+      body {
+        margin: 1rem;
+        max-width: 32rem;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+      label {
+        font-weight: 600;
+      }
+      input[type="text"] {
+        font: inherit;
+        padding: 0.45rem 0.6rem;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      .actions {
+        display: flex;
+        gap: 0.5rem;
+      }
+      button {
+        font: inherit;
+        padding: 0.4rem 0.9rem;
+        cursor: pointer;
+      }
+      #status {
+        min-height: 1.25em;
+        margin: 0;
+        font-size: 0.9rem;
+      }
+      #status[data-error="true"] {
+        color: #c62828;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="settings-form" novalidate>
+      <label for="url-input">TabURL</label>
+      <input
+        id="url-input"
+        type="text"
+        placeholder="https://example.com"
+        autocomplete="off"
+        spellcheck="false"
+      />
+      <div class="actions">
+        <button type="submit">Save</button>
+        <button id="clear-btn" type="button">Clear</button>
+      </div>
+      <p id="status" role="status" aria-live="polite"></p>
+    </form>
+    <script src="taburl-options.js"></script>
+  </body>
+</html>

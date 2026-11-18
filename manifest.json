@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "TabURL",
+  "version": "1.0.0",
+  "description": "Open new tabs at a URL of your choice with TabURL.",
+  "icons": {
+    "48": "taburl.svg",
+    "96": "taburl.svg"
+  },
+  "permissions": ["storage"],
+  "chrome_url_overrides": {
+    "newtab": "taburl.html"
+  },
+  "options_ui": {
+    "page": "taburl-options.html",
+    "open_in_tab": false
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "taburl.joeldanielrico@gmail.com",
+      "strict_min_version": "140.0",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
+    },
+    "gecko_android": {
+      "strict_min_version": "142.0"
+    }
+  }
+}

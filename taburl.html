@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>TabURL</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        font-family: system-ui, -apple-system, sans-serif;
+      }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+      }
+      main[hidden] {
+        display: none;
+      }
+      main {
+        text-align: center;
+      }
+      button {
+        font: inherit;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+      }
+    </style>
+    <script src="taburl.js"></script>
+  </head>
+  <body>
+    <main id="setup" hidden>
+      <p>No TabURL configured.</p>
+      <button id="open-options" type="button">Set URL</button>
+    </main>
+  </body>
+</html>
